@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap');
+
+@import url('https://cdn.jsdelivr.net/gh/krystonschwarze/coolicons@v4.1.0/css/coolicons.css');
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: #19194d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.admin-page {
+  display: flex;
+  height: 100vh;
+  background-color: #24275C;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 300px;
+  background-color: #24275C;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 32px 0 24px 0; /* Increased top padding to lower the section */
+}
+
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150%;           /* More elongated */
+  max-width: 250px;     /* Optional: set a max width for consistency */
+  padding: 4px 0px;     /* Slimmer vertically */
+  font-size: 25px;      /* Adjust as needed for balance */
+  font-weight: bold;
+  border-radius: 8px;   /* Slightly more rounded for a slim look */
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: background-color 0.3s ease;
+  gap: 12px;
+  margin-bottom: 12px;  /* Space between buttons */
+}
+
+
+.nav-item span {
+  display: inline-block;
+  position: relative;
+  left: 50%;           /* Moves element 50% from the left of its container */
+  transform: translateX(-62%); /* Centers it horizontally */
+  width: 100%;
+}
+
+.nav-item:focus {
+  outline: 2px solid #E94E77;
+}
+
+.nav-item:hover {
+  background-color: rgba(233, 78, 119, 0.2);
+}
+
+.nav-item.active {
+  width: 150%; /* or a fixed width for better centering */
+  padding: 4px 0; /* Reduced vertical padding for smaller height */
+  background-color: #E94E77;
+  font-size: 25px;
+}
+
+.nav-item i {
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+.sign-out-btn {
+  margin: 20px;
+  padding: 8px 16px;
+  background-color: #E94E77;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-out-btn:hover {
+  background-color: #d43d66;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background-color: #24275C;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  width: 80px;
+  height: 70px;;
+  margin-right: 20px;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #22135A;
+}
+
+.main-title {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.search-section {
+  margin-right: 20px;
+}
+
+.search-btn {
+  min-width: 180px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #E94E77;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: rgba(233, 78, 119, 0.1);
+}
+
+/* Users Panel */
+.users-panel {
+  background-color: #22135A;
+  border-radius: 24px;
+  padding: 24px;
+  margin: 10px;
+  max-width: 1500px;      /* Example: limit width */
+  margin-right: auto;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+}
+
+.panel-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  flex: 1;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.add-user-btn {
+  background-color: #E94E77;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0;
+}
+
+.add-user-btn:hover {
+  background-color: #d43d66;
+}
+
+/* Users Table */
+.users-table {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  border-radius: 14px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: #E94E77;
+  border-radius: 14px 14px 0 0;
+}
+
+.table-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.table-heading:first-child {
+  text-align: left;
+  padding-left: 27px;
+}
+
+.table-body {
+  background-color: #22135A;
+  border-radius: 0 0 14px 14px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  gap: 16px;
+  padding: 12px 16px;
+  border: 1px solid #fff;
+
+
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  font-size: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-cell.username {
+  font-weight: 400;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 24px;
+}
+
+.table-cell.role,
+.table-cell.group {
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #E94E77;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #d43d66;
+}
+
+.delete-btn {
+  background-color: #E94E77;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d43d66;
+}
+
+.action-btn i {
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-page {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 10px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .main-title {
+    font-size: 24px;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 8px;
+  }
+  
+  .table-cell {
+    font-size: 16px;
+  }
+}
