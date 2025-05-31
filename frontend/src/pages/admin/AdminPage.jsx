@@ -38,15 +38,15 @@ const AdminPage = () => {
 
         <div className="nav-menu">
           <button className="nav-item">
-            <i className="ci-dashboard"></i>
+            <i className="ci-Desktop"></i>
             <span>Dashboard</span>
           </button>
           <button className="nav-item active">
-            <i className="ci-user"></i>
+            <i className="ci-User_02"></i>
             <span>Users</span>
           </button>
           <button className="nav-item">
-            <i className="ci-users"></i>
+            <i className="ci-Users_Group"></i>
             <span>Groups</span>
           </button>
         </div>
@@ -68,7 +68,7 @@ const AdminPage = () => {
           </div>
           <div className="search-section">
             <button className="search-btn">
-              <i className="ci-search"></i>
+              <i className="ci-Search_Magnifying_Glass"></i>
               SEARCH
             </button>
           </div>
@@ -79,7 +79,7 @@ const AdminPage = () => {
           <div className="panel-header">
             <h2 className="section-title">USERS</h2>
             <button className="add-user-btn" onClick={handleAddUser}>
-              <i className="ci-plus"></i>
+              <i className="ci-User_Add"></i>
               ADD USER
             </button>
           </div>
@@ -104,14 +104,14 @@ const AdminPage = () => {
                       onClick={() => handleEditUser(user.username)}
                       title="Edit"
                     >
-                      <i className="ci-edit"></i>
+                      <i className="ci-Edit_Pencil_Line_01"></i>
                     </button>
                     <button 
                       className="action-btn delete-btn"
                       onClick={() => handleDeleteUser(user.username)}
                       title="Delete"
                     >
-                      <i className="ci-trash"></i>
+                      <i className="ci-Close_Circle"></i>
                     </button>
                   </div>
                 </div>

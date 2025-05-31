@@ -78,28 +78,35 @@ body {
 .nav-item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 150%;           /* More elongated */
-  max-width: 250px;     /* Optional: set a max width for consistency */
-  padding: 4px 0px;     /* Slimmer vertically */
-  font-size: 25px;      /* Adjust as needed for balance */
+  justify-content: flex-start;
+  width: 150%;          
+  max-width: 250px;     
+  padding: 4px 0px 4px 20px;     
+  font-size: 25px;      
   font-weight: bold;
-  border-radius: 8px;   /* Slightly more rounded for a slim look */
+  border-radius: 8px;   
   cursor: pointer;
   background: none;
   border: none;
   transition: background-color 0.3s ease;
   gap: 12px;
-  margin-bottom: 12px;  /* Space between buttons */
+  margin-bottom: 12px;  
 }
 
+.nav-item i {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+}
 
 .nav-item span {
   display: inline-block;
   position: relative;
-  left: 50%;           /* Moves element 50% from the left of its container */
-  transform: translateX(-62%); /* Centers it horizontally */
-  width: 100%;
+  color: white;
+  text-align: left;
+  flex: 1;
+  margin-left: 0;
 }
 
 .nav-item:focus {
@@ -111,15 +118,10 @@ body {
 }
 
 .nav-item.active {
-  width: 150%; /* or a fixed width for better centering */
-  padding: 4px 0; /* Reduced vertical padding for smaller height */
+  width: 150%; 
+  padding: 4px 0px 4px 20px; 
   background-color: #E94E77;
   font-size: 25px;
-}
-
-.nav-item i {
-  margin-right: 12px;
-  font-size: 20px;
 }
 
 .sign-out-btn {
@@ -252,10 +254,21 @@ body {
   top: 50%;
   transform: translateY(-50%);
   margin-left: 0;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.add-user-btn:hover {
-  background-color: #d43d66;
+.add-user-btn i {
+  font-size: 25px;
 }
 
 /* Users Table */
