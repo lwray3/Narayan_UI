@@ -8,6 +8,8 @@ const AdminPage = () => {
     { username: 'bobwilson', role: 'group_admin', group: 'Group A' },
     { username: 'admin', role: 'system_admin', group: '' }
   ]);
+  
+  const [activeTab, setActiveTab] = useState('users');
 
   const handleAddUser = () => {
     console.log('Add user clicked');
@@ -43,11 +45,11 @@ const AdminPage = () => {
           </button>
           <button className="nav-item active">
             <i className="ci-User_02"></i>
-            <span>Users</span>
+            <span>IDSL Agent</span>
           </button>
           <button className="nav-item">
             <i className="ci-Users_Group"></i>
-            <span>Groups</span>
+            <span>MOLx</span>
           </button>
         </div>
 
@@ -77,7 +79,21 @@ const AdminPage = () => {
         {/* Users Panel */}
         <div className="users-panel">
           <div className="panel-header">
-            <h2 className="section-title">USERS</h2>
+
+            <div className="toggle-switch">
+              <button
+                className={`toggle-btn ${activeTab === 'users' ? 'active' : ''}`}
+                onClick={() => setActiveTab('users')}
+              >
+                <i className="ci-User_02"></i> USER
+              </button>
+              <button
+                className={`toggle-btn ${activeTab === 'groups' ? 'active' : ''}`}
+                onClick={() => setActiveTab('groups')}
+              >
+                <i className="ci-Users_Group"></i> GROUPS
+              </button>
+            </div>
             <button className="add-user-btn" onClick={handleAddUser}>
               <i className="ci-User_Add"></i>
               ADD USER
@@ -104,14 +120,14 @@ const AdminPage = () => {
                       onClick={() => handleEditUser(user.username)}
                       title="Edit"
                     >
-                      <i className="ci-Edit_Pencil_Line_01"></i>
+                      <i className="ci-Edit_Pencil_Line_01" style = {{fontSize: '19px'}}></i>
                     </button>
                     <button 
                       className="action-btn delete-btn"
                       onClick={() => handleDeleteUser(user.username)}
                       title="Delete"
                     >
-                      <i className="ci-Close_Circle"></i>
+                      <i className="ci-Close_Circle" style = {{fontSize: '19px'}}></i>
                     </button>
                   </div>
                 </div>
